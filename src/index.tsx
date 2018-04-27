@@ -1,11 +1,27 @@
+import './index.css';
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+
+import { Provider } from 'mobx-react';
+import { StoreModel } from './models/StoreModel';
+
 import registerServiceWorker from './registerServiceWorker';
 
+import App from './App';
+
+
+
+
+
+const RootStore = StoreModel.create();
+
+
+
 ReactDOM.render(
-  <App />,
+    (<Provider {...RootStore} >
+        <App />
+    </Provider>),
   document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();
