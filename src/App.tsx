@@ -9,8 +9,6 @@ import TodoList from './components/TodoList';
 import logo from './logo.svg';
 // import * as Hello from './components/Hello';
 
-
-
 class App extends React.Component {
   public render() {
     return (

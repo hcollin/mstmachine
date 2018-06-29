@@ -10,18 +10,14 @@ import registerServiceWorker from './registerServiceWorker';
 
 import App from './App';
 
-
-
-
-
-const RootStore = StoreModel.create();
-
-
+const rootStore = StoreModel.create();
 
 ReactDOM.render(
-    (<Provider {...RootStore} >
-        <App />
-    </Provider>),
-  document.getElementById('root') as HTMLElement
+    (
+        <Provider {...rootStore} >
+            <App />
+        </Provider>
+    ),
+  document.getElementById('root') as HTMLElement,
 );
 registerServiceWorker();
